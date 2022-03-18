@@ -1,7 +1,7 @@
 for pdf in */*.pdf
 do
-  if [[ $pdf =~ ^(.*)\ \( ]]
+  if [[ $pdf =~ ^(.*) ]]
   then
-    echo mv -- "$pdf" ...to... "${pdf%%/*}/${BASH_REMATCH[1]}"
+    echo mv -- "$pdf" ...to... "${pdf%%/*}/${pdf%%/*}".pdf
   fi
 done
