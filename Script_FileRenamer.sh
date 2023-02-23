@@ -2,6 +2,6 @@ for pdf in */*.pdf
 do
   if [[ $pdf =~ ^(.*) ]]
   then
-    echo mv -- "$pdf" ...to... "${pdf%%/*}/${pdf%%/*}".pdf
+    mv "$pdf" "${pdf%%/*}/${pdf%%/*}".pdf
   fi
 done
